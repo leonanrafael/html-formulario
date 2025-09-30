@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Lato:wght@100;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #F4F0EA;
+  color: #798252 ;
+  font-family: "Cabin", serif;
+  font-weight: 400;
+}
+header {
+  padding: 2rem; /*unidade de medida relativa -> adaptavel as configurações do tamanho da fonte definida pelo usuario, 1 rem = 16px */
+  background-color: #331f19;
+  text-align: center; /* alinha o texto no eixo principal(nesse caso, é o horizontal... mas tambem pode ser o vertical.*/
+}
+main {
+  display: flex;/*obs: o flex box é sempre posto no elemento pai para alterar ps filhos*/
+  flex-direction: column;/*utilizando o "display: flex" os elementos passam a ser exibidos no eixo horizontal, essa propiedade muda o eixo da caixa*/
+  padding: 2rem; 
+  gap: 1.5rem;/*propiedade do flex-box --> serve para dar um espaçamento entre os elementos(aqui, ele está espaçando as sections.*/
+}
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.one { /* classe para diminuir o gap entre os paragrafos da primeira section*/
+  gap: 0.1rem;
+}
+h2 {
+  color: #331f19;
+  font-size: 1.2rem; /*tamanho das letras*/
+}
+
+/*estilização  de seletor por atributo: entre os colchetes é só colocar o atributo do input e o valor dele*/
+input[type="radio"], input[type="checkbox"] {
+  accent-color: #ccd595; /* cor dos inputs selecionados */
+}
+input[type="text"], input[type="password"], input[type="date"], input[type="email"] {
+  width: 100%;
+  padding: 0.6rem;
+  border: 2px solid #ccd595;
+  border-radius: 5px;
+  outline: none; /*destaca a caixa de input com uma linha azul ao clicar nela... é importante para acessibilidade nao tirar */
+  background-color: transparent;
+}
+/*estilização de pseudo elemento (aqui todos os placeholders estão sendo estilizados) */
+input::placeholder {
+  color: #cbbba7;
+}
+/*os select da pergunta 7*/
+select {
+  cursor: pointer;
+  background-color:#ccd595 ;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #331f19;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  padding: 0.1rem;
+  outline: none;
+}
+img {
+  width: 5rem;
+  border-radius: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse ;
+}
+th {
+  background-color: #ccd595;
+  color: #331f19;
+  padding: 1rem;
+}
+td {
+  color: #331f19;
+  padding: 1rem;
+  text-align: center;
+}
+tfoot td {
+  background-color: #331f19;
+  color: #F4F0EA;
+}
+
+details {
+  background-color: #ccd595;
+  border-radius: 5px;
+  padding: 1rem;
+}
+summary {
+  color: #331f19;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+ol {
+  margin-left: 1.5rem;
+}
+ol li {
+  padding: 0.2rem;
+}
+
+fieldset {
+  border: solid 2px #ccd595;
+  border-radius: 5px;
+  padding: 1rem;/*entre os elementos e a borda*/
+}
+legend {
+  color: #331f19;
+  padding: 0 0.5rem; /*padding somente na horizontal*/
+  font-size: 1.1rem;
+}
+textarea{
+  outline: none;
+  border-radius: 5px;
+  border: solid 2px #ccd595;
+  background-color: transparent;
+}
+button{
+  background-color: #ccd595;
+  border: none;
+  border-radius: 5px;
+  padding: 0.6rem;
+  color: #331f19;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #331f19;
+  padding: 2rem;
+  text-align: center;
+}
+.p-footer{
+  color:#F4F0EA;
+}
+.p-footer a {
+  text-decoration: none;
+  color: #ccd595;
+  padding: 4px 16px;
+  border-radius: 30px;
+  background-color: #798252;
+}
+
+/*test
+ fieldset {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 40%;
+  padding: 1rem;
+  border-radius: 5px;
+}
+fieldset textarea, button{
+  background-color: black;
+  color: red;
+  border-radius: 5px;
+}
+fieldset textarea::placeholder, input::placeholder{
+  display: flex;
+  flex-direction: column;
+  color: rgba(0, 128, 0, 0.674);
+}
+*/
+
